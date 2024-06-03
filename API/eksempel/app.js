@@ -9,7 +9,7 @@ function fetchWeather() {
     })
     .then(response => response.json())
     .then(data => {
-        const temperature = data.properties.timeseries[0].data.instant.details.air_temperature;
+        const temperature = data.properties.timeseries[5].data.instant.details.air_temperature;
         weatherDiv.textContent = `Temperatur: ${temperature}°C`;
     })
     .catch(error => {
